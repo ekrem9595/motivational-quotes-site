@@ -1,7 +1,7 @@
 const API_KEY = "EaxTkWCIa4vHFwB7yH93MXlMQ2uAvJaIovT3mkxQaktYVi9EPk4uvcqh";  // Dein Pexels API-Schlüssel hier einfügen
 
 // Themen für die Suche nach Bildern
-const topics = ["nature", "mountain", "motivation", "sunrise", "happiness", "peace"];
+const topics = ["nature", "mountain", "motivation", "sunrise", "happiness", "peace", "inspired", "love"];
 
 // Funktion, um ein zufälliges Zitat und Bild zu laden
 async function generateQuote() {
