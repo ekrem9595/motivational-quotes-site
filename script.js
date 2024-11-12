@@ -1,4 +1,4 @@
-// Sample quotes and images - these can be expanded or linked to a database or API
+// Zitate mit Links zu zufälligen Unsplash-Bildern
 const quotes = [
     {
         text: "Believe you can and you're halfway there.",
@@ -15,20 +15,25 @@ const quotes = [
     {
         text: "Happiness is not by chance, but by choice.",
         image: "https://source.unsplash.com/1600x900/?happiness,smile"
+    },
+    {
+        text: "Success is not final; failure is not fatal: It is the courage to continue that counts.",
+        image: "https://source.unsplash.com/1600x900/?success,motivation"
     }
 ];
 
-// Function to display a new quote and background
+// Funktion, um ein zufälliges Zitat anzuzeigen
 function generateQuote() {
     const randomIndex = Math.floor(Math.random() * quotes.length);
     const selectedQuote = quotes[randomIndex];
 
-    // Update quote text
+    // Aktualisiere das Zitat-Textfeld
     document.getElementById("quote").textContent = selectedQuote.text;
 
-    // Update background image
+    // Aktualisiere das Hintergrundbild
     document.getElementById("background-image").style.backgroundImage = `url(${selectedQuote.image})`;
 }
 
-// Initial quote on load
+// Initiales Zitat beim Laden der Seite anzeigen
 window.onload = generateQuote;
+
