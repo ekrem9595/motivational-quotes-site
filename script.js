@@ -16,7 +16,7 @@ async function generateQuote() {
     });
 
     const data = await response.json();
-    const imageUrl = data.photos[0].src.large;  // Das URL des Bildes aus der Antwort
+    const imageUrl = data.photos[0].src["1920x1080"];  // Bild in der gewünschten Auflösung (1920x1080)
 
     // Zufälliges Zitat auswählen (kannst du auch aus einer Liste definieren)
     const quotes = [
