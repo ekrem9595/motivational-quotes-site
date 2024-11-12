@@ -30,8 +30,9 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    background-size: cover;  /* Deckt die gesamte Fläche ab */
-    background-position: center;
+    background-size: cover;         /* Bild füllt den Bildschirm komplett */
+    background-position: center;    /* Zentriert das Bild */
+    background-repeat: no-repeat;   /* Verhindert Wiederholung */
     filter: brightness(0.7);
     transition: background-image 0.5s ease-in-out;
 }
