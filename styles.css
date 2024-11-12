@@ -49,10 +49,10 @@ body, html {
     transform: translateY(-20%);  /* Feinabstimmung der Position */
 }
 
-/* Schaltfläche zum Generieren eines neuen Spruchs */
+/* Schaltfläche zum Generieren eines neuen Spruchs am unteren Bildschirmrand */
 button {
-    position: absolute;
-    bottom: 20px;  /* Positioniert die Schaltfläche ganz unten */
+    position: fixed;  /* Fixiert die Schaltfläche am unteren Rand */
+    bottom: 20px;     /* Abstand von 20px vom unteren Rand */
     left: 50%;
     transform: translateX(-50%);
     background-color: rgba(255, 255, 255, 0.8);
