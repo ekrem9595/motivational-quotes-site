@@ -49,12 +49,11 @@ body, html {
     transform: translateY(-20%);  /* Feinabstimmung der Position */
 }
 
-/* Schaltfläche zum Generieren eines neuen Spruchs am unteren Bildschirmrand */
+/* Schaltfläche zum Generieren eines neuen Spruchs am unteren, rechten Rand */
 button {
     position: fixed;  /* Fixiert die Schaltfläche am unteren Rand */
     bottom: 20px;     /* Abstand von 20px vom unteren Rand */
-    left: 50%;
-    transform: translateX(-50%);
+    right: 20px;      /* Positioniert die Schaltfläche rechtsbündig */
     background-color: rgba(255, 255, 255, 0.8);
     border: none;
     color: #333;
