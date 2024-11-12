@@ -3,17 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Inspiration</title>
+    <title>Inspiration Quotes</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="quote-container">
-        <div id="background-image" class="background-image"></div>
-        <div class="quote-text">
-            <p id="quote">Loading inspiration...</p>
-            <button onclick="generateQuote()">Get Inspired</button>
-        </div>
+        <div class="background-image"></div>
+        <div class="quote-text" id="quote-text">Your daily dose of inspiration...</div>
+        <button onclick="generateQuote()">Get Inspired</button>
     </div>
-    <script src="script.js"></script>
+
+    <script>
+        const quotes = [
+            "Believe you can and you're halfway there.",
+            "The best way to predict the future is to invent it.",
+            "Do what you can, with what you have, where you are.",
+            "Don't watch the clock; do what it does. Keep going.",
+            "You are stronger than you think.",
+            "Dream big and dare to fail.",
+            "Believe in yourself and all that you are.",
+            "The only way to do great work is to love what you do.",
+            "Happiness is not something ready made. It comes from your own actions.",
+            "What we think, we become.",
+            "The harder I work, the luckier I get.",
+            "The future belongs to those who believe in the beauty of their dreams.",
+            "Life is 10% what happens to us and 90% how we react to it.",
+            "Be the change that you wish to see in the world.",
+            "You miss 100% of the shots you don’t take.",
+            "Act as if what you do makes a difference. It does.",
+            "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+            "It always seems impossible until it's done.",
+            "Start where you are. Use what you have. Do what you can.",
+            "Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle.",
+            "Everything you’ve ever wanted is on the other side of fear.",
+            "Be so good they can't ignore you.",
+            "The journey of a thousand miles begins with one step.",
+            "Success is how high you bounce when you hit bottom.",
+            "Don't wait. The time will never be just right.",
+            "The best revenge is massive success.",
+            "You are never too old to set another goal or to dream a new dream.",
+            "If opportunity doesn’t knock, build a door.",
+            "Don't be afraid to give up the good to go for the great.",
+            "The secret of getting ahead is getting started.",
+            "Life isn’t about getting and having, it’s about giving and being.",
+            "Success usually comes to those who are too busy to be looking for it.",
+            "You must be the change you wish to see in the world.",
+            "If you can dream it, you can do it.",
+            "It’s not whether you get knocked down, it’s whether you get up.",
+            "With the new day comes new strength and new thoughts.",
+            "You only live once, but if you do it right, once is enough.",
+            "The only limit to our realization of tomorrow is our doubts of today.",
+            "Everything you’ve ever wanted is on the other side of fear.",
+            "Failure will never overtake me if my determination to succeed is strong enough.",
+            "Your time is limited, so don’t waste it living someone else’s life.",
+            "In order to succeed, we must first believe that we can.",
+            "The only way to achieve the impossible is to believe it is possible.",
+            "We may encounter many defeats but we must not be defeated.",
+            "Only I can change my life. No one can do it for me.",
+            "The purpose of life is a life of purpose.",
+            "What you get by achieving your goals is not as important as what you become by achieving your goals.",
+            "A champion is defined not by their wins but by how they can recover when they fall.",
+            "Don’t watch the clock; do what it does. Keep going.",
+            "Believe you can and you're halfway there.",
+            "When you have a dream, you've got to grab it and never let go.",
+            "There is nothing impossible to they who will try."
+        ];
+
+        const backgroundImages = Array.from({ length: 50 }, (_, i) => `https://picsum.photos/1080/1920?random=${i + 1}`);
+
+        function generateQuote() {
+            const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+            const randomImage = backgroundImages[Math.floor(Math.random() * backgroundImages.length)];
+
+            document.getElementById("quote-text").innerText = randomQuote;
+            document.querySelector(".background-image").style.backgroundImage = `url('${randomImage}')`;
+        }
+
+        window.onload = generateQuote;
+    </script>
 </body>
 </html>
