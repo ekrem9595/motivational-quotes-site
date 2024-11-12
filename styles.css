@@ -8,7 +8,7 @@
 
 body, html {
     height: 100%;
-    font-family: 'Playfair Display', serif;  /* Elegante Schriftart */
+    font-family: 'Playfair Display', serif;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,7 +20,7 @@ body, html {
 .quote-container {
     position: relative;
     width: 100%;
-    height: 100vh;  /* Volle Höhe des Bildschirms */
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -30,9 +30,8 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    background-size: cover;         /* Bild füllt den Bildschirm komplett */
-    background-position: center;    /* Zentriert das Bild */
-    background-repeat: no-repeat;   /* Verhindert Wiederholung */
+    background-size: cover;
+    background-position: center;
     filter: brightness(0.7);
     transition: background-image 0.5s ease-in-out;
 }
@@ -45,17 +44,17 @@ body, html {
     margin: auto;
     font-size: 2rem;
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  /* Textschatten für bessere Lesbarkeit */
-    top: 50%;  /* Text weiter unten positioniert */
-    transform: translateY(-20%);  /* Feinabstimmung der Position */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    top: 40%; /* Etwas höher platziert, um Platz für die Schaltfläche zu schaffen */
+    transform: translateY(-20%);
 }
 
-/* Zentrierte Schaltfläche am unteren Rand */
+/* Schaltfläche am unteren, mittigen Rand */
 button {
-    position: fixed;      /* Fixiert die Schaltfläche am unteren Rand */
-    bottom: 20px;         /* Abstand von 20px vom unteren Rand */
-    left: 50%;            /* Zentriert die Schaltfläche horizontal */
-    transform: translateX(-50%); /* Genau zentriert */
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: rgba(255, 255, 255, 0.8);
     border: none;
     color: #333;
@@ -73,10 +72,10 @@ button:hover {
 /* Responsives Design für mobile Ansicht */
 @media (max-width: 768px) {
     .quote-text {
-        font-size: 1.5rem;  /* Kleinere Schriftgröße für Mobilgeräte */
+        font-size: 1.5rem;
     }
 
     button {
-        padding: 8px 16px;  /* Kleinere Schaltfläche für Mobilgeräte */
+        padding: 8px 16px;
     }
 }
