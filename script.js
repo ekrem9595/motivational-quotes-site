@@ -1,7 +1,7 @@
 const API_KEY = "EaxTkWCIa4vHFwB7yH93MXlMQ2uAvJaIovT3mkxQaktYVi9EPk4uvcqh";  // Dein Pexels API-Schlüssel hier einfügen
 
 // Themen für die Suche nach Bildern
-const topics = ["nature", "mountain", "motivation", "sunrise", "happiness", "peace", "inspired", "love"];
+const topics = ["nature", "mountain", "motivation", "sunrise", "happiness", "peace"];
 
 // Funktion, um ein zufälliges Zitat und Bild zu laden
 async function generateQuote() {
@@ -16,7 +16,7 @@ async function generateQuote() {
     });
 
     const data = await response.json();
-    const imageUrl = data.photos[0].src["1920x1080"];  // Bild in der gewünschten Auflösung (1920x1080)
+    const imageUrl = data.photos[0].src.original;  // Das URL des Bildes aus der Antwort
 
     // Zufälliges Zitat auswählen (kannst du auch aus einer Liste definieren)
     const quotes = [
